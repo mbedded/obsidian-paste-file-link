@@ -1,11 +1,13 @@
 {
-	"id": "sample-plugin",
-	"name": "Sample Plugin",
+	"id": "paste-as-file-link",
+	"name": "Paste as file link",
 	"version": "1.0.0",
-	"minAppVersion": "0.15.0",
-	"description": "Demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
+	"minAppVersion": "1.0.0",
+	"description": "Allows pasting clipboard content as file links to existing notes.",
+	"author": "Matthias Büge (mbedded)",
+	"authorUrl": "https://mbuege.com",
+	"fundingUrl": {
+		"Ko-fi": "https://ko-fi.com/mbedded"
+	},
 	"isDesktopOnly": false
 }
