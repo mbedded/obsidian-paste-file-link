@@ -16,7 +16,7 @@ export default class PastePlugin extends Plugin {
 
     // Commands
     this.addCommand({
-      id: "paste-as-file-link-command",
+      id: "paste-as-file-link",
       name: "Paste the clipboard as file link",
       editorCallback: this.onPasteViaCommand.bind(this)
     });
