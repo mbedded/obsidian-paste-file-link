@@ -3,7 +3,7 @@
 	"name": "Paste as file link",
 	"version": "1.0.0",
 	"minAppVersion": "1.0.0",
-	"description": "Allows pasting clipboard content as file links to existing notes.",
+	"description": "Paste clipboard content as file links into existing notes, when a file with this name is existing.",
 	"author": "Matthias Büge (mbedded)",
 	"authorUrl": "https://mbuege.com",
 	"fundingUrl": {

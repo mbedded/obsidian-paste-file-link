@@ -1,6 +1,6 @@
-import { App, SuggestModal, TFile } from "obsidian";
+import { App, FuzzySuggestModal, TFile } from "obsidian";
 
-export class FileSelectionModal extends SuggestModal<TFile> {
+export class FileSelectionModal extends FuzzySuggestModal<TFile> {
   private files: TFile[];
   private fileSelectedCallback: (file: TFile) => void;
 
@@ -10,18 +10,15 @@ export class FileSelectionModal extends SuggestModal<TFile> {
     this.fileSelectedCallback = fileSelectedCallback;
   }
 
-  getSuggestions(query: string): TFile[] {
-    return this.files.filter(x =>
-      x.path.toLowerCase().includes(query.toLowerCase())
-    );
+  getItemText(file: TFile): string {
+    return file.path;
   }
 
-  renderSuggestion(file: TFile, el: HTMLElement) {
-    el.createEl("div", {text: file.name});
-    el.createEl("small", {text: file.path});
+  getItems(): TFile[] {
+    return this.files;
   }
 
-  onChooseSuggestion(file: TFile, evt: MouseEvent | KeyboardEvent) {
+  onChooseItem(file: TFile, evt: MouseEvent | KeyboardEvent): void {
     this.fileSelectedCallback(file);
   }
 
