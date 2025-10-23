@@ -1,0 +1,9 @@
+{
+  "commands": {
+    "paste-as-file-link-name": "Paste the clipboard as file link"
+  },
+  "settings": {
+    "hook-into-editor-paste-title": "Hook into Ctrl+V",
+    "hook-into-editor-paste-description": "If this setting is 'true' this plugin will intercept the paste command and perform additional logic. The plugin must be reloaded to take effect."
+  }
+}

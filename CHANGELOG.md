@@ -4,6 +4,10 @@ This file lists the notable changes between the versions of this plugin.
 
 ## Version 1.x
 
+### Upcoming
+
+- #3: Add simple localization for `en` (English) and `de` (German).
+
 ### Version 1.1.0
 
 - Use `FuzzySuggestModal` instead of custom window and update plugin description.

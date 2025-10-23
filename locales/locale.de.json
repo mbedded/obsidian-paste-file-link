@@ -1,0 +1,9 @@
+{
+  "commands": {
+    "paste-as-file-link-name": "Zwischenablage als Datei-Link einfügen"
+  },
+  "settings": {
+    "hook-into-editor-paste-title": "Strg+V abfangen",
+    "hook-into-editor-paste-description": "Wenn diese Einstellung aktiviert ist, fängt dieses Plugin den Einfügen-Befehl ab und führt zusätzliche Logik aus. Das Plugin muss neu geladen werden, damit die Änderung wirksam wird."
+  }
+}
