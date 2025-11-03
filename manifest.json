@@ -1,7 +1,7 @@
 {
 	"id": "paste-as-file-link",
 	"name": "Paste as file link",
-	"version": "1.1.0",
+	"version": "1.2.0",
 	"minAppVersion": "1.0.0",
 	"description": "Paste clipboard content as file links into existing notes, when a file with this name is existing.",
 	"author": "Matthias Büge (mbedded)",
