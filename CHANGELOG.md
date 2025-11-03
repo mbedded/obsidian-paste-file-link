@@ -4,9 +4,9 @@ This file lists the notable changes between the versions of this plugin.
 
 ## Version 1.x
 
-### Upcoming
+### Version 1.2.0
 
-- #3: Add simple localization for `en` (English) and `de` (German).
+- [#3](https://github.com/mbedded/obsidian-paste-file-link/issues/3): Add simple localization for `en` (English) and `de` (German).
 
 ### Version 1.1.0
 
