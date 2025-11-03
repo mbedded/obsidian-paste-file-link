@@ -1,10 +1,32 @@
-import { Editor, Plugin, TFile } from "obsidian";
+import { App, Editor, Plugin, PluginManifest, TFile } from "obsidian";
 import { DEFAULT_SETTINGS, PastePluginSettings } from "./pastePluginSettings";
 import { PasteSettingTab } from "./pasteSettingsTab";
 import { FileSelectionModal } from "./fileSelectionModal";
+import { Localizer } from "./localizer";
 
 export default class PastePlugin extends Plugin {
-  settings: PastePluginSettings;
+  private _settings: PastePluginSettings;
+  private readonly _localizer: Localizer;
+
+  constructor(app: App, manifest: PluginManifest) {
+    super(app, manifest);
+
+    // Get UI language and initialize localizer with supported language or fallback.
+    const lang = window.localStorage.getItem('language');
+    if (Localizer.isLocaleSupported(lang)) {
+      this._localizer = new Localizer(lang);
+    } else {
+      this._localizer = new Localizer();
+    }
+  }
+
+  get localizer(): Localizer {
+    return this._localizer;
+  }
+
+  get settings(): PastePluginSettings {
+    return this._settings;
+  }
 
   public async onload() {
     await this.loadSettings();
@@ -13,11 +35,10 @@ export default class PastePlugin extends Plugin {
     if (this.settings.hookIntoEditorPaste) {
       this.registerEvent(this.app.workspace.on("editor-paste", this.onPaste.bind(this)));
     }
-
     // Commands
     this.addCommand({
       id: "paste-as-file-link",
-      name: "Paste the clipboard as file link",
+      name: this._localizer.texts.commands["paste-as-file-link-name"],
       editorCallback: this.onPasteViaCommand.bind(this)
     });
 
@@ -30,7 +51,7 @@ export default class PastePlugin extends Plugin {
   }
 
   public async loadSettings() {
-    this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
+    this._settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
   }
 
   public async saveSettings() {

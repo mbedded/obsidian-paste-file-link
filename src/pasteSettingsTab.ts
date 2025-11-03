@@ -15,8 +15,8 @@ export class PasteSettingTab extends PluginSettingTab {
     containerEl.empty();
 
     new Setting(containerEl)
-      .setName("Hook into Ctrl+V")
-      .setDesc("If this setting is 'true' this plugin will intercept the paste command and perform additional logic. The plugin must be reloaded to take effect.")
+      .setName(this.plugin.localizer.texts.settings["hook-into-editor-paste-title"])
+      .setDesc(this.plugin.localizer.texts.settings["hook-into-editor-paste-description"])
       .addToggle(x => x
         .setValue(this.plugin.settings.hookIntoEditorPaste)
         .onChange(async (value) => {
