@@ -4,6 +4,10 @@ This file lists the notable changes between the versions of this plugin.
 
 ## Version 1.x
 
+### Version 1.3.0
+
+- [#5](https://github.com/mbedded/obsidian-paste-file-link/pull/5): Use introduced `SettingsGroup` to improve layout in the settings tab.
+
 ### Version 1.2.0
 
 - [#3](https://github.com/mbedded/obsidian-paste-file-link/issues/3): Add simple localization for `en` (English) and `de` (German).
