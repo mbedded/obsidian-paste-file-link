@@ -1,4 +1,4 @@
-import { App, PluginSettingTab, Setting } from "obsidian";
+import { App, PluginSettingTab, SettingGroup } from "obsidian";
 import PastePlugin from "./main";
 
 export class PasteSettingTab extends PluginSettingTab {
@@ -14,15 +14,15 @@ export class PasteSettingTab extends PluginSettingTab {
 
     containerEl.empty();
 
-    new Setting(containerEl)
-      .setName(this.plugin.localizer.texts.settings["hook-into-editor-paste-title"])
-      .setDesc(this.plugin.localizer.texts.settings["hook-into-editor-paste-description"])
-      .addToggle(x => x
-        .setValue(this.plugin.settings.hookIntoEditorPaste)
-        .onChange(async (value) => {
-          this.plugin.settings.hookIntoEditorPaste = value;
-          await this.plugin.saveSettings();
-        }));
-
+    new SettingGroup(containerEl)
+      .addSetting(x => x
+        .setName(this.plugin.localizer.texts.settings["hook-into-editor-paste-title"])
+        .setDesc(this.plugin.localizer.texts.settings["hook-into-editor-paste-description"])
+        .addToggle(x => x
+          .setValue(this.plugin.settings.hookIntoEditorPaste)
+          .onChange(async (value) => {
+            this.plugin.settings.hookIntoEditorPaste = value;
+            await this.plugin.saveSettings();
+          })));
   }
 }
