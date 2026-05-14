@@ -5,7 +5,9 @@ import { FileSelectionModal } from "./fileSelectionModal";
 import { Localizer } from "./localizer";
 
 export default class PastePlugin extends Plugin {
-  private _settings: PastePluginSettings;
+  // Settings will be overwritten by "onLoad".
+  // Assignment added to make the compiler happy.
+  private _settings: PastePluginSettings = DEFAULT_SETTINGS;
   private readonly _localizer: Localizer;
 
   constructor(app: App, manifest: PluginManifest) {
