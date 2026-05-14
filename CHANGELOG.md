@@ -4,12 +4,13 @@ This file lists the notable changes between the versions of this plugin.
 
 ## Version 1.x
 
-### Upcoming
+### Version 1.3.1
 
-- Several changes to improve the "health" on the [Obsidian-Plugin-Page](https://community.obsidian.md/plugins/paste-as-file-link).
-  - NPM packages (dependencies) updated.
-  - ESlint warnings resolved.
-  - GitHub artifact attestation added.
+- No functional changes.
+- [#6](https://github.com/mbedded/obsidian-paste-file-link/pull/6): Minor code changes to improve the "health" on the [Obsidian-Plugin-Page](https://community.obsidian.md/plugins/paste-as-file-link).
+  - Update NPM packages (dependencies).
+  - Resolve ESlint warnings.
+  - Add GitHub artifact attestation.
 
 ### Version 1.3.0
 
