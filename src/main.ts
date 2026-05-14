@@ -1,4 +1,4 @@
-import { App, Editor, Plugin, PluginManifest, TFile } from "obsidian";
+import { App, Editor, getLanguage, Plugin, PluginManifest, TFile } from "obsidian";
 import { DEFAULT_SETTINGS, PastePluginSettings } from "./pastePluginSettings";
 import { PasteSettingTab } from "./pasteSettingsTab";
 import { FileSelectionModal } from "./fileSelectionModal";
@@ -12,7 +12,7 @@ export default class PastePlugin extends Plugin {
     super(app, manifest);
 
     // Get UI language and initialize localizer with supported language or fallback.
-    const lang = window.localStorage.getItem('language');
+    const lang = getLanguage();
     if (Localizer.isLocaleSupported(lang)) {
       this._localizer = new Localizer(lang);
     } else {
