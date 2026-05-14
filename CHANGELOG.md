@@ -4,6 +4,13 @@ This file lists the notable changes between the versions of this plugin.
 
 ## Version 1.x
 
+### Upcoming
+
+- Several changes to improve the "health" on the [Obsidian-Plugin-Page](https://community.obsidian.md/plugins/paste-as-file-link).
+  - NPM packages (dependencies) updated.
+  - ESlint warnings resolved.
+  - GitHub artifact attestation added.
+
 ### Version 1.3.0
 
 - [#5](https://github.com/mbedded/obsidian-paste-file-link/pull/5): Use introduced `SettingsGroup` to improve layout in the settings tab.
