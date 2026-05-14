@@ -18,7 +18,7 @@ export class FileSelectionModal extends FuzzySuggestModal<TFile> {
     return this.files;
   }
 
-  onChooseItem(file: TFile, evt: MouseEvent | KeyboardEvent): void {
+  onChooseItem(file: TFile, _event: MouseEvent | KeyboardEvent): void {
     this.fileSelectedCallback(file);
   }
 

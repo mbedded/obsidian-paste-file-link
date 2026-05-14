@@ -1,5 +1,5 @@
-import en from 'locales/locale.en.json';
-import de from 'locales/locale.de.json';
+import en from './../locales/locale.en.json';
+import de from './../locales/locale.de.json';
 
 export type LocaleTexts = typeof en;
 
