@@ -1,4 +1,4 @@
-# Paste as a file link
+# Paste as file link
 
 This plugin is used to paste the content of the clipboard as a link
 to another file in the current vault.
