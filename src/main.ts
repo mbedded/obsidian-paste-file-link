@@ -7,7 +7,7 @@ import { Localizer } from "./localizer";
 export default class PastePlugin extends Plugin {
   // Settings will be overwritten by "onLoad".
   // Assignment added to make the compiler happy.
-  private _settings: PastePluginSettings = DEFAULT_SETTINGS;
+  public settings: PastePluginSettings = DEFAULT_SETTINGS;
   private readonly _localizer: Localizer;
 
   constructor(app: App, manifest: PluginManifest) {
@@ -24,10 +24,6 @@ export default class PastePlugin extends Plugin {
 
   get localizer(): Localizer {
     return this._localizer;
-  }
-
-  get settings(): PastePluginSettings {
-    return this._settings;
   }
 
   public async onload() {
@@ -53,7 +49,7 @@ export default class PastePlugin extends Plugin {
   }
 
   public async loadSettings() {
-    this._settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
+    this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
   }
 
   public async saveSettings() {
